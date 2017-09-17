@@ -1,5 +1,6 @@
-# webServiceRFID
+# webServiceRFID 
 source code webservice project RFID
+Nếu chạy trên web thì thay đỗi http://localhost:3000 => https://servicerfid.herokuapp.com/
 # SỬ DỤNG API CÁN BỘ
 # GET
 GET DANH SÁCH CÁN BỘ ##
