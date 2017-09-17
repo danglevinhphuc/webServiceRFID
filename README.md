@@ -2,9 +2,9 @@
 source code webservice project RFID
 # Sử dụng api CanBo
 # GET
-GET DANH SÁCH CÁN BỘ
+GET DANH SÁCH CÁN BỘ ##
 http://localhost:3000/api/canbo/gets
-GET DANH SÁCH CÁN BỘ THEO TÊN
+GET DANH SÁCH CÁN BỘ THEO TÊN ##
 http://localhost:3000/api/canbo/search/ABC
 GET DANH CÁN BỘ THEO MSCB
 http://localhost:3000/api/canbo/get/B1400718
