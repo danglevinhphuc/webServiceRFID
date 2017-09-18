@@ -8,13 +8,15 @@ let xFrameOptions = require('x-frame-options');
 // api can bo
 let canbo = require("./routes/canBo");
 // api diemDanhRa
-let diemdanhra = require("./routes/diemdanhra");
+let diemdanhra = require("./routes/diemDanhRa");
 // api diemDanhVao
-let diemdanhvao = require("./routes/diemdanhvao");
+let diemdanhvao = require("./routes/diemDanhVao");
 // api sinhVien
-let sinhvien = require("./routes/sinhvien");
+let sinhvien = require("./routes/sinhVien");
 // api suKien
-let sukien = require("./routes/sukien");
+let sukien = require("./routes/suKien");
+// api danhSach tham gia su kien co vang hoac khong vang
+let danhsach = require("./routes/danhSach");
 let app = express();
 
 // LOCALHOST:3000
@@ -34,7 +36,12 @@ app.use("/api/diemdanhra",diemdanhra);
 app.use("/api/diemdanhvao",diemdanhvao);
 app.use("/api/sinhvien",sinhvien);
 app.use("/api/sukien",sukien);
+app.use("/api/danhsach",danhsach);
+// 404
+app.use("*",(req,res)=>{
+	res.send("welcome to web service RFID");
+});
 /*** PORT BUILD **/
 app.listen(process.env.PORT || port, (req,res)=>{
-	console.log("Connected");
+	console.log("connected");
 });
