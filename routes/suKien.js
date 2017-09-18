@@ -19,10 +19,10 @@ router.get("/gets",(req,res) =>{
 	});
 });
 // GET API sukien VIA KEYWORD FROM SEARCH NAME
-router.get("/search/:name",function(req,res,next){
+router.get("/search/:name",(req,res,next)=>{
 	ten = req.params.name;
 	// FIND sukien VIA NAME
-	db.sukien.find({tenSuKien: new RegExp(ten, "i")},function(err,docs){
+	db.sukien.find({tenSuKien: new RegExp(ten, "i")},(err,docs)=>{
 		if(err){
 			res.json({success: false,msg:'Not sukien'});
 		}else{
@@ -44,7 +44,9 @@ router.post("/post",(req,res)=>{
 	let newDate = new Date(req.body.ngay);
 	let newsukien = new sukien({
 		"tenSuKien" : req.body.tenSuKien,
-		"ngay" : newDate
+		"ngay" : newDate,
+		"gioBatDau" : req.body.gioBatDau,
+		"gioKetThuc" : req.body.gioKetThuc
 	});
 	// them du lieu vao csdl
 	db.sukien.save(newsukien,err =>{
@@ -62,9 +64,10 @@ router.put("/put/:id",(req,res) =>{
 	// tao du lieu de sua
 	let dataEdit ={
 		"tenSuKien" : req.body.tenSuKien,
-		"ngay" : newDate
+		"ngay" : newDate,
+		"gioBatDau" : req.body.gioBatDau,
+		"gioKetThuc" : req.body.gioKetThuc
 	};
-	console.log(dataEdit);
 	db.sukien.update({_id: mongojs.ObjectID(id)}, dataEdit, err=> {
 		if(err){
 			res.json({success: false,msg:'Not update sukien'});
