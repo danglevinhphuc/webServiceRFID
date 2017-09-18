@@ -35,3 +35,15 @@ http://localhost:3000/api/diemdanhvao/put/59bdd2396a749a19087b5c9e
 DELETE XOÁ 1 CÁN BỘ HOẶC SINH VIÊN ĐIỂM DANH VÀO THEO ID
 http://localhost:3000/api/diemdanhvao/delete/59bdd2396a749a19087b5c9e
 # TƯƠNG TỰ API CỦA ĐIÊM DANH RA VÀ SỰ KIỆN CHỈ CẦN THAY diemdanhvao => diemdanhra | diemdanhvao => sukien
+# API DANH SÁCH 
+ Danh sách này là api gồm mssv / mscb nếu có dùng để lưu lại danh sách xuất ra file excel 
+# GET
+http://localhost:3000/api/danhsach/gets
+# POST
+http://localhost:3000/api/danhsach/post
+# PUT 
+PUT SỬA 1 THÀNH VIÊN TRONG DANH SÁCH THEO ID
+http://localhost:3000/api/danhsach/put/59bdd2396a749a19087b5c9e
+# DELETE 
+DELETE XOÁ 1 THÀNH VIÊN TRONG DANH SÁCH THEO ID
+http://localhost:3000/api/danhsach/delete/59bdd2396a749a19087b5c9e
