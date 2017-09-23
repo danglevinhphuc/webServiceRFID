@@ -9,6 +9,14 @@ let suKien = new Schema({
     ngay:  {
         type: Date,
         required: true
+    },
+    gioBatDau :  {
+        type: String,
+        required: true
+    },
+    gioKetThuc:{
+    	type: String,
+	required: true
     }
 },{collection: "sukien"});
 
